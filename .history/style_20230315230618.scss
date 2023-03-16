@@ -1,0 +1,112 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--dark);
+  color: #fff;
+}
+
+header {
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+#new-todo-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-todo-input {
+  flex: 1 1 0%;
+  background: var(--darker);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1rem;
+}
+#new-todo-submit {
+  color: var(--pink);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+main {
+  flex: 1 1 0%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  .task-list {
+    padding: 2rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    #tasks .task {
+      display: flex;
+      justify-content: space-between;
+      background: var(--darkest);
+      padding: 1rem;
+      border-radius: 1.5rem;
+      margin-bottom: 1rem;
+      .content .content_input {
+        color: var(--light);
+        font-size: 1rem;
+        font-weight: 500;
+        &:not(:read-only) {
+          color: var(--pink);
+        }
+      }
+      .actions {
+        display: flex;
+        margin: 0 -0.5rem;
+        button {
+          text-transform: uppercase;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}

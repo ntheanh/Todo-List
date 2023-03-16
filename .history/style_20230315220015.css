@@ -1,0 +1,57 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--dark);
+  color: #fff;
+}
+
+header {
+  padding: 5rem 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+#new-todo-form {
+  display: flex;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#new-todo-input {
+  flex: 1 1 0%;
+  background: var(--darker);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  color: var(--light);
+  text-align: center;
+  font-size: 1.25rem;
+}
